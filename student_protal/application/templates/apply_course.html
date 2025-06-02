@@ -1,0 +1,18 @@
+{% extends 'application/base.html' %}
+
+{% block title %}Apply for Course{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h3 class="mb-4 text-center">Course Application</h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="text-center">
+        <button type="submit" class="btn btn-success">Apply</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

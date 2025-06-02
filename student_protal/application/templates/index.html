@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Student Portal{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-light text-center py-5">
+  <div class="container">
+    <h1 class="display-4">Welcome to the Student Application Portal</h1>
+    <p class="lead mt-3">Apply for your dream course, manage your applications, and track your progress—all in one
+      place.</p>
+    <a href="{% url 'register' %}" class="btn btn-primary btn-lg mt-4">Get Started</a>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">Easy Registration</h5>
+          <p class="card-text">Quickly sign up and manage your student profile securely.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-4 mt-md-0">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">Apply Courses</h5>
+          <p class="card-text">View available courses and apply in just a few clicks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-4 mt-md-0">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">Track Applications</h5>
+          <p class="card-text">Track the status of your submitted course applications anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-4">Already registered?</h2>
+    <a href="{% url 'login' %}" class="btn btn-light btn-lg">Login Now</a>
+  </div>
+</div>
+{% endblock %}
